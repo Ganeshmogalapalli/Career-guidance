@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tech Career Guidance</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: lightblue;
+      color: black;
+    }
+
+    .header {
+      background-color: darkblue;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      border-bottom: 5px solid red;
+      position: relative;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 40px;
+    }
+
+    .header p {
+      margin: 10px 0 0;
+      font-size: 20px;
+    }
+
+    nav {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    nav a {
+      background-color: white;
+      color: #003366;
+      padding: 10px 16px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #e6e6e6;
+      transform: scale(1.05);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .career-card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 5px 10px gray;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+      cursor: default;
+    }
+
+    .career-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      background-color: #f9f9ff;
+    }
+
+    .career-card h2 {
+      color: darkblue;
+      margin-top: 0;
+      font-size: 30px;
+      border-bottom: 2px solid red;
+      padding-bottom: 5px;
+    }
+
+    .skills {
+      color: green;
+      font-style: italic;
+      margin: 10px 0;
+    }
+
+    .salary {
+      color: gray;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .link-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: red;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin: 10px 10px 0 0;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .link-btn:hover {
+      background-color: darkred;
+      transform: scale(1.05);
+    }
+
+    .back-btn {
+      background-color: #0077cc;
+    }
+
+    .back-btn:hover {
+      background-color: #005fa3;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        position: static;
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      nav a {
+        margin: 0 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Tech Career Guidance</h1>
+    <p>Explore Your Future in Software Development</p>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </div>
+
+  <div class="container">
+    <div class="career-card">
+      <h2>Frontend Developer</h2>
+      <p>Design and build the visual elements of websites and applications that users interact with directly.</p>
+      <p class="skills">Skills: HTML, CSS, JavaScript, React, Angular</p>
+      <p class="salary">Salary Range: $70,000 - $120,000</p>
+      <a href="frontend.html" class="link-btn">View Details</a>
+    </div>
+
+    <div class="career-card">
+      <h2>Backend Developer</h2>
+      <p>Develop and maintain the server-side logic, databases, and APIs that power applications.</p>
+      <p class="skills">Skills: Python, Java, Node.js, SQL, PHP</p>
+      <p class="salary">Salary Range: $80,000 - $130,000</p>
+      <a href="backend.html" class="link-btn">View Details</a>
+    </div>
+
+    <div class="career-card">
+      <h2>Full Stack Developer</h2>
+      <p>Master both frontend and backend development to create complete web applications.</p>
+      <p class="skills">Skills: JavaScript, Python, Git, AWS, MongoDB</p>
+      <p class="salary">Salary Range: $90,000 - $150,000</p>
+      <a href="fullstack.html" class="link-btn">View Details</a>
+    </div>
+
+    <div class="career-card">
+      <h2>Mobile App Developer</h2>
+      <p>Create applications for iOS and Android devices with user-friendly interfaces.</p>
+      <p class="skills">Skills: Swift, Kotlin, Flutter, Xamarin</p>
+      <p class="salary">Salary Range: $75,000 - $125,000</p>
+      <a href="mobile.html" class="link-btn">View Details</a>
+    </div>
+  </div>
+
+  <div style="text-align: center; margin-bottom: 40px;">
+    <a href="careers.html" class="link-btn back-btn">← Back to Careers</a>
+  </div>
+</body>
+</html>  change like that this also like a style

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cardiologist Profile Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f0f4f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #0077b6;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    h1, h2, h3 {
+      color: #023e8a;
+    }
+
+    img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      margin-bottom: 50px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card, .skill-box {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover, .skill-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+      background-color: #e0f7ff;
+    }
+
+    .card h3 {
+      color: #0077b6;
+      margin-bottom: 10px;
+      font-size: 1.1em;
+    }
+
+    .card a.button-link {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 8px 16px;
+      background-color: #0077b6;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .card a.button-link:hover {
+      background-color: #005f8a;
+    }
+
+    footer {
+      background-color: #0077b6;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 50px;
+    }
+
+    /* Skills Accordion */
+    .skills-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 20px;
+    }
+
+    .skill-box {
+      cursor: pointer;
+      position: relative;
+    }
+
+    .skill-button {
+      font-size: 1.1em;
+      font-weight: bold;
+      background-color: #0077b6;
+      color: white;
+      border: none;
+      padding: 14px 20px;
+      width: 100%;
+      border-radius: 8px;
+      text-align: left;
+      transition: background-color 0.3s;
+    }
+
+    .skill-box:hover .skill-button {
+      background-color: #005f8a;
+    }
+
+    .skill-content {
+      display: none;
+      background-color: white;
+      padding: 15px;
+      margin-top: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      font-size: 0.95em;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    /* Scroll-to-Top Button */
+    #scrollTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 99;
+      font-size: 20px;
+      border: none;
+      outline: none;
+      background-color: #0077b6;
+      color: white;
+      cursor: pointer;
+      padding: 12px 16px;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: background-color 0.3s ease;
+    }
+
+    #scrollTopBtn:hover {
+      background-color: #005f8a;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Cardiologist Overview</h1>
+  <p>Heart Health Experts Saving Lives</p>
+</header>
+
+<main>
+
+  <div class="section">
+    <h2>About Cardiologists</h2>
+    <img src="./cardiologist image.jpg" alt="Cardiologist with patient">
+    <p>
+      Cardiologists are specialized doctors who diagnose and treat diseases of the heart and blood vessels. They use advanced tools and tests to manage cardiovascular conditions, improve heart function, and prevent future complications.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>1. Skills & Technologies</h2>
+    <div class="skills-section">
+      <div class="skill-box">
+        <button class="skill-button">Electrocardiography (ECG)</button>
+        <div class="skill-content">Interpreting heart rhythms and electrical activity to detect abnormalities using ECG machines.</div>
+      </div>
+      <div class="skill-box">
+        <button class="skill-button">Echocardiography</button>
+        <div class="skill-content">Using ultrasound to assess heart structure, valve function, and blood flow dynamics.</div>
+      </div>
+      <div class="skill-box">
+        <button class="skill-button">Cardiac Catheterization</button>
+        <div class="skill-content">Inserting catheters into the heart to diagnose or treat blockages and other conditions.</div>
+      </div>
+      <div class="skill-box">
+        <button class="skill-button">Hypertension Management</button>
+        <div class="skill-content">Monitoring and treating high blood pressure to reduce cardiovascular risks.</div>
+      </div>
+      <div class="skill-box">
+        <button class="skill-button">Interventional Procedures</button>
+        <div class="skill-content">Performing stent placement, angioplasty, and minimally invasive repairs to restore blood flow.</div>
+      </div>
+      <div class="skill-box">
+        <button class="skill-button">Preventive Cardiology</button>
+        <div class="skill-content">Advising lifestyle changes and medication to prevent heart disease before symptoms arise.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>2. Top Employers & Hospitals</h2>
+    <div class="card-grid">
+      <div class="card"><h3>Cleveland Clinic</h3><p>World leader in cardiology and cardiovascular surgery.</p><a href="https://my.clevelandclinic.org/" class="button-link" target="_blank">Visit Site</a></div>
+      <div class="card"><h3>Mount Sinai Hospital</h3><p>Advanced cardiac care and research excellence.</p><a href="https://www.mountsinai.org/" class="button-link" target="_blank">Visit Site</a></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>3. Reference Links</h2>
+    <div class="card-grid">
+      <div class="card"><h3>What Do Cardiologists Do?</h3><p>Overview of their diagnostic, treatment, and prevention roles.</p><a href="https://www.medicalnewstoday.com/articles/cardiologist" class="button-link" target="_blank">Read More</a></div>
+      <div class="card"><h3>American College of Cardiology</h3><p>Professional association for cardiology research and education.</p><a href="https://www.acc.org/" class="button-link" target="_blank">Visit ACC</a></div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2025 HealthWeb | Designed for Educational & Informational Use</p>
+</footer>
+
+<!-- Scroll-to-Top Button -->
+<button id="scrollTopBtn" title="Go to top">↑</button>
+
+<!-- JS: scroll-top & accordion -->
+<script>
+  // Scroll to top button
+  const scrollBtn = document.getElementById("scrollTopBtn");
+  window.onscroll = function () {
+    scrollBtn.style.display = (document.documentElement.scrollTop > 200) ? "block" : "none";
+  };
+  scrollBtn.onclick = function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // Accordion toggle
+  const buttons = document.querySelectorAll(".skill-button");
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const content = btn.nextElementSibling;
+      const isVisible = content.style.display === "block";
+      document.querySelectorAll(".skill-content").forEach(el => el.style.display = "none");
+      content.style.display = isVisible ? "none" : "block";
+    });
+  });
+</script>
+
+</body>
+</html>

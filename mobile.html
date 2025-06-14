@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mobile App Developer Career Guide</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #fce4ec, #ffffff);
+      color: #333;
+    }
+
+    .header {
+      background-color: #d81b60;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 48px;
+    }
+
+    .header p {
+      margin-top: 10px;
+      font-size: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+
+    .section h2 {
+      color: #d81b60;
+      border-bottom: 3px solid #d81b60;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 20px 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .skills-list, .technologies-list, .companies-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .skill, .technology, .company {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      flex: 1 1 calc(33% - 40px);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .skill h3, .technology h3, .company h3 {
+      margin-top: 0;
+      color: #d81b60;
+    }
+
+    .roadmap {
+      background-color: #fce4ec;
+      padding: 20px;
+      border-left: 5px solid #f48fb1;
+      border-radius: 8px;
+    }
+
+    .roadmap ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .salary-info {
+      background-color: #fff3e0;
+      padding: 20px;
+      border-left: 5px solid #ffb74d;
+      border-radius: 8px;
+    }
+
+    /* Updated styles for learn-links */
+    .learn-links ul {
+      list-style-type: none;
+      padding-left: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .learn-links li {
+      flex: 1 1 calc(33% - 20px);
+      min-width: 250px;
+    }
+
+    .learn-links a {
+      display: block;
+      padding: 15px 20px;
+      background-color: #d81b60;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 4px 6px rgba(216, 27, 96, 0.3);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+
+    .learn-links a:hover {
+      background-color: #a31544;
+      box-shadow: 0 6px 12px rgba(163, 21, 68, 0.6);
+    }
+
+    @media (max-width: 768px) {
+      .skill, .technology, .company {
+        flex: 1 1 100%;
+      }
+
+      .learn-links li {
+        flex: 1 1 100%;
+      }
+    }
+.skill, .company {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1 1 calc(33% - 40px);
+  transition: all 0.3s ease-in-out;
+}
+.skill:hover, .company:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transform: scale(1.03);
+  cursor: pointer;
+}
+.skill:hover, .company:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  z-index: 99;
+  font-size: 24px;
+  background-color: #0288d1;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+  background-color: #01579b;
+}
+
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Mobile App Developer</h1>
+    <p>Create engaging applications for iOS and Android devices</p>
+  </div>
+
+  <div class="container">
+    <!-- Course Overview -->
+    <div class="section">
+      <h2>Course Overview</h2>
+      <p>Mobile app development involves creating software applications that run on mobile devices. This field combines creativity with technical skills to build apps that are user-friendly, efficient, and visually appealing on platforms like iOS and Android.</p>
+      <img src="m1.jpeg" alt="Mobile App Development">
+    </div>
+
+    <!-- Skills & Technologies -->
+    <div class="section">
+      <h2>Skills & Technologies</h2>
+      <div class="skills-list">
+        <div class="skill">
+          <h3>Swift</h3>
+          <p>Used to develop native iOS applications with smooth performance.</p>
+        </div>
+        <div class="skill">
+          <h3>Kotlin</h3>
+          <p>The preferred language for building modern Android apps.</p>
+        </div>
+        <div class="skill">
+          <h3>Flutter</h3>
+          <p>Cross-platform framework to build apps for both iOS and Android from a single codebase.</p>
+        </div>
+        <div class="skill">
+          <h3>Xamarin</h3>
+          <p>Another cross-platform tool for developing apps using C# and .NET.</p>
+        </div>
+      </div>
+      <img src="m2.jpeg" alt="Mobile App Technologies">
+    </div>
+
+    <!-- Learning Roadmap -->
+    <div class="section">
+      <h2>Learning Roadmap</h2>
+      <div class="roadmap">
+        <ul>
+          <li><strong>Weeks 1-3:</strong> Basics of programming and introduction to mobile platforms.</li>
+          <li><strong>Weeks 4-6:</strong> Learn Swift for iOS or Kotlin for Android app development.</li>
+          <li><strong>Weeks 7-9:</strong> Study UI/UX design principles for mobile.</li>
+          <li><strong>Weeks 10-12:</strong> Cross-platform development with Flutter or Xamarin.</li>
+          <li><strong>Weeks 13-15:</strong> Backend integration and API consumption.</li>
+          <li><strong>Weeks 16-18:</strong> Testing, debugging, and app store deployment.</li>
+          <li><strong>Weeks 19-20:</strong> Capstone project and portfolio preparation.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Career Opportunities -->
+    <div class="section">
+      <h2>Career Opportunities</h2>
+      <div class="companies-list">
+        <div class="company">
+          <h3>Infosys</h3>
+          <p>Develop innovative mobile solutions for global clients.</p>
+        </div>
+        <div class="company">
+          <h3>Tata Consultancy Services (TCS)</h3>
+          <p>Work on diverse mobile app projects across industries.</p>
+        </div>
+        <div class="company">
+          <h3>Hike Messenger</h3>
+          <p>Join a team building popular communication apps.</p>
+        </div>
+        <div class="company">
+          <h3>Zoho Corporation</h3>
+          <p>Build business applications with mobile interfaces.</p>
+        </div>
+        <div class="company">
+          <h3>Ola Cabs</h3>
+          <p>Work on mobile apps for transportation and ride-hailing.</p>
+        </div>
+        <div class="company">
+          <h3>Swiggy</h3>
+          <p>Develop mobile solutions for food delivery and logistics.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Salary Expectations -->
+    <div class="section">
+      <h2>Salary Expectations in India</h2>
+      <div class="salary-info">
+        <ul>
+          <li><strong>Entry-Level (0-2 years):</strong> ₹3,00,000 - ₹5,50,000 per annum</li>
+          <li><strong>Mid-Level (3-5 years):</strong> ₹5,50,000 - ₹11,00,000 per annum</li>
+          <li><strong>Senior-Level (5+ years):</strong> ₹11,00,000 - ₹20,00,000+ per annum</li>
+        </ul>
+        <p><em>Note: Salaries vary based on skills, experience, and location.</em></p>
+      </div>
+    </div>
+
+    <!-- Where to Learn & References -->
+    <div class="section">
+      <h2>Where to Learn & Reference Links</h2>
+      <div class="learn-links">
+        <ul>
+          <li><a href="https://www.coursera.org/specializations/mobile-app-development" target="_blank" rel="noopener">Coursera: Mobile App Development Specialization</a></li>
+          <li><a href="https://developer.apple.com/tutorials/swiftui" target="_blank" rel="noopener">Apple Developer: SwiftUI Tutorials</a></li>
+          <li><a href="https://developer.android.com/courses" target="_blank" rel="noopener">Android Developers: Training Courses</a></li>
+          <li><a href="https://flutter.dev/docs" target="_blank" rel="noopener">Flutter Official Documentation</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/xamarin/" target="_blank" rel="noopener">Microsoft Xamarin Tutorials</a></li>
+          <li><a href="https://www.udemy.com/topic/mobile-app-development/" target="_blank" rel="noopener">Udemy: Mobile App Development Courses</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+<!-- Scroll to Top Button -->
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">↑</button>
+
+</body>
+<script>
+  // Show the button after scrolling down 300px
+  window.onscroll = function() {
+    const btn = document.getElementById("scrollTopBtn");
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+
+  // Smooth scroll to top
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</html>

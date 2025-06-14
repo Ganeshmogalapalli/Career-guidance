@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Career Guidance</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 30px;
+      transition: background 0.5s, color 0.5s;
+    }
+
+    body.dark-theme {
+      background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+      color: #fff;
+    }
+
+    body.light-theme {
+      background: linear-gradient(to bottom right, #f0f0f0, #e0e0e0);
+      color: #000;
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    #theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 8px 16px;
+      background-color: #ffd700;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+      z-index: 100;
+    }
+
+    #search-bar {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    #search-input {
+      width: 60%;
+      padding: 12px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      outline: none;
+    }
+
+    .career-section {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      margin: 25px auto;
+      max-width: 900px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .light-theme .career-section {
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    .career-section h2 {
+      color: #ffd700;
+    }
+
+    .light-theme .career-section h2 {
+      color: #6a11cb;
+    }
+
+    .job-link {
+      display: block;
+      margin: 8px 0;
+      color: #ffeb3b;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .light-theme .job-link {
+      color: #0077cc;
+    }
+
+    .job-link:hover {
+      text-decoration: underline;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    #no-result {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #ffcccb;
+      margin-top: 20px;
+      display: none;
+    }
+
+    #topBtn {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      z-index: 99;
+      background-color: #ffd700;
+      color: #000;
+      border: none;
+      outline: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      display: none;
+      transition: opacity 0.4s ease;
+    }
+
+    #topBtn:hover {
+      background-color: #ffca28;
+    }
+  </style>
+</head>
+<body class="dark-theme">
+  <button id="theme-toggle" onclick="toggleTheme()">☀</button>
+
+  <h1>Career Guidance Portal</h1>
+  <p style="text-align: center; max-width: 800px; margin: auto;">
+    Explore various career paths and job opportunities. Use the search bar below to filter courses by category.
+  </p>
+
+  <div id="search-bar">
+    <input type="text" id="search-input" list="suggestions" placeholder="Search by keyword or category..." oninput="filterSections()" autofocus />
+    <datalist id="suggestions">
+      <option value="technology"><option value="tech"><option value="developer"><option value="software">
+      <option value="data science"><option value="cybersecurity"><option value="ai"><option value="cloud">
+      <option value="programming"><option value="medical"><option value="doctor"><option value="nurse">
+      <option value="research"><option value="medicine"><option value="healthcare"><option value="arts">
+      <option value="design"><option value="animation"><option value="graphic"><option value="writer">
+      <option value="music"><option value="content"><option value="engineering"><option value="mechanical">
+      <option value="civil"><option value="electrical"><option value="construction"><option value="electronics">
+      <option value="law"><option value="lawyer"><option value="legal"><option value="advocate">
+      <option value="court"><option value="business"><option value="marketing"><option value="sales">
+      <option value="management"><option value="startup"><option value="entrepreneur"><option value="analyst">
+      <option value="finance"><option value="leadership">
+    </datalist>
+  </div>
+
+  <div id="no-result">No results found.</div>
+
+  <!-- Career Sections -->
+  <div class="career-section" data-category="technology">
+    <h2>Technology</h2>
+    <p>Technology careers include software development, data science, cybersecurity, and AI. Great for analytical thinkers and problem solvers.</p>
+    <a class="job-link" href="https://www.linkedin.com/jobs/software-developer-jobs/" target="_blank">Software Developer Jobs</a>
+    <a class="job-link" href="https://www.indeed.com/q-Data-Scientist-jobs.html" target="_blank">Data Scientist Jobs</a>
+    <a class="job-link" href="https://www.monster.com/jobs/search/?q=cybersecurity" target="_blank">Cybersecurity Analyst Jobs</a>
+  </div>
+
+  <div class="career-section" data-category="medical">
+    <h2>Medical</h2>
+    <p>Medical careers include doctors, nurses, and researchers. These roles are vital for public health and patient care.</p>
+    <a class="job-link" href="https://www.practo.com/company/careers" target="_blank">Doctor Jobs</a>
+    <a class="job-link" href="https://www.naukri.com/nursing-jobs" target="_blank">Nurse Jobs</a>
+    <a class="job-link" href="https://www.indeed.com/q-medical-research-jobs.html" target="_blank">Medical Research Jobs</a>
+  </div>
+
+  <div class="career-section" data-category="arts">
+    <h2>Arts</h2>
+    <p>Arts careers include design, animation, writing, music, and more. Perfect for creative and expressive individuals.</p>
+    <a class="job-link" href="https://dribbble.com/jobs" target="_blank">Graphic Designer Jobs</a>
+    <a class="job-link" href="https://www.upwork.com/freelance-jobs/writing/" target="_blank">Content Writer Jobs</a>
+    <a class="job-link" href="https://www.indeed.com/q-Animator-jobs.html" target="_blank">Animator Jobs</a>
+  </div>
+
+  <div class="career-section" data-category="engineering">
+    <h2>Engineering</h2>
+    <p>Engineering involves building and solving real-world problems using scientific knowledge. Roles include mechanical, civil, and electrical engineering.</p>
+    <a class="job-link" href="https://www.naukri.com/mechanical-engineer-jobs" target="_blank">Mechanical Engineer Jobs</a>
+    <a class="job-link" href="https://www.indeed.com/q-Civil-Engineer-jobs.html" target="_blank">Civil Engineer Jobs</a>
+    <a class="job-link" href="https://www.linkedin.com/jobs/electrical-engineer-jobs/" target="_blank">Electrical Engineer Jobs</a>
+  </div>
+
+  <div class="career-section" data-category="law">
+    <h2>Law</h2>
+    <p>Law careers involve justice and advocacy. Includes lawyers, advisors, and legal officers. Best for analytical and persuasive minds.</p>
+    <a class="job-link" href="https://www.indeed.com/q-Corporate-Lawyer-jobs.html" target="_blank">Corporate Lawyer Jobs</a>
+    <a class="job-link" href="https://www.naukri.com/legal-advisor-jobs" target="_blank">Legal Advisor Jobs</a>
+    <a class="job-link" href="https://www.sarkariresult.com/" target="_blank">Public Prosecutor Openings</a>
+  </div>
+
+  <div class="career-section" data-category="business">
+    <h2>Business</h2>
+    <p>Business involves management, strategy, and innovation. Careers include marketing, analysis, and leadership roles.</p>
+    <a class="job-link" href="https://www.linkedin.com/jobs/marketing-manager-jobs/" target="_blank">Marketing Manager Jobs</a>
+    <a class="job-link" href="https://www.naukri.com/business-analyst-jobs" target="_blank">Business Analyst Jobs</a>
+    <a class="job-link" href="https://www.indeed.com/q-Sales-Executive-jobs.html" target="_blank">Sales Executive Jobs</a>
+  </div>
+
+  <!-- Scroll to Top Button -->
+  <button id="topBtn" title="Go to top" onclick="scrollToTop()">↑</button>
+
+  <script>
+    const keywordMap = {
+      "technology": ["technology", "tech", "developer", "software", "data science", "cybersecurity", "ai", "cloud", "programming"],
+      "medical": ["medical", "doctor", "nurse", "research", "medicine", "healthcare", "surgeon", "dentist"],
+      "arts": ["arts", "design", "animation", "graphic", "writer", "music", "creative", "content"],
+      "engineering": ["engineering", "mechanical", "civil", "electrical", "construction", "electronics"],
+      "law": ["law", "lawyer", "legal", "advocate", "court", "judge", "prosecutor"],
+      "business": ["business", "marketing", "sales", "management", "startup", "entrepreneur", "analyst", "finance"]
+    };
+
+    function filterSections() {
+      const input = document.getElementById('search-input').value.toLowerCase().trim();
+      const sections = document.querySelectorAll('.career-section');
+      const noResult = document.getElementById('no-result');
+      let matchedCategory = null;
+
+      if (input === "") {
+        sections.forEach(section => section.style.display = 'block');
+        noResult.style.display = 'none';
+        return;
+      }
+
+      for (const [category, keywords] of Object.entries(keywordMap)) {
+        for (const keyword of keywords) {
+          if (keyword.includes(input) || input.includes(keyword)) {
+            matchedCategory = category;
+            break;
+          }
+        }
+        if (matchedCategory) break;
+      }
+
+      if (matchedCategory) {
+        sections.forEach(section => {
+          if (section.getAttribute('data-category') === matchedCategory) {
+            section.style.display = 'block';
+            section.scrollIntoView({ behavior: 'smooth' });
+          } else {
+            section.style.display = 'none';
+          }
+        });
+        noResult.style.display = 'none';
+      } else {
+        sections.forEach(section => section.style.display = 'none');
+        noResult.style.display = 'block';
+      }
+    }
+
+    window.onscroll = function () {
+      const topBtn = document.getElementById("topBtn");
+      topBtn.style.display = (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) ? "block" : "none";
+    };
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function toggleTheme() {
+      const body = document.body;
+      const btn = document.getElementById("theme-toggle");
+      body.classList.toggle("light-theme");
+      body.classList.toggle("dark-theme");
+      btn.textContent = body.classList.contains("light-theme") ? "🌑" : "☀";
+    }
+  </script>
+</body>
+</html>

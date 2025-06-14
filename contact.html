@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Career Guidance Contact</title>
+  <style>
+    :root {
+      --bg-color: #eef2f3;
+      --text-color: #333;
+      --card-bg: #ffffff;
+      --button-bg: #04AA6D;
+      --button-hover: #45a049;
+      --input-bg: #fff;
+    }
+
+    body.dark-mode {
+      --bg-color: #1f2937;
+      --text-color: #e5e7eb;
+      --card-bg: #374151;
+      --button-bg: #2563eb;
+      --button-hover: #1d4ed8;
+      --input-bg: #4b5563;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    h2, h3 {
+      text-align: center;
+    }
+
+    .top-bar {
+      background: var(--card-bg);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .top-bar button, .top-bar a {
+      padding: 8px 16px;
+      margin-left: 10px;
+      font-size: 14px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+    }
+
+    .theme-btn {
+      background-color: #6b7280;
+    }
+
+    .home-btn {
+      background-color: #1e3a8a;
+    }
+
+    .theme-btn:hover {
+      background-color: #4b5563;
+    }
+
+    .home-btn:hover {
+      background-color: #0f172a;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background: var(--card-bg);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type=text], input[type=email], select, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+      background-color: var(--input-bg);
+      color: var(--text-color);
+    }
+
+    input[type=submit] {
+      background-color: var(--button-bg);
+      color: white;
+      padding: 14px 25px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    input[type=submit]:hover {
+      background-color: var(--button-hover);
+    }
+
+    .success-message {
+      color: limegreen;
+      font-weight: bold;
+      text-align: center;
+      display: none;
+    }
+
+    .team {
+      margin-top: 40px;
+    }
+
+    .member {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .member button {
+      padding: 10px 20px;
+      font-size: 15px;
+      border: none;
+      border-radius: 6px;
+      background-color: #007BFF;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .member button:hover {
+      background-color: #0056b3;
+    }
+
+    .member-details {
+      display: none;
+      margin-top: 10px;
+      background-color: #f8f8f8;
+      padding: 15px;
+      border-radius: 6px;
+      font-size: 15px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <a href="index.html" class="home-btn">Home</a>
+  <button class="theme-btn" onclick="toggleTheme()">🌓</button>
+</div>
+
+<div class="container">
+  <h2>Career Guidance Contact Form</h2>
+  <form id="contact-form">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="user_name" placeholder="Your first name..." required>
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="user_lastname" placeholder="Your last name..." required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="user_email" placeholder="Your email..." required>
+
+    <label for="country">Country</label>
+    <select id="country" name="user_country" required>
+      <option value="">--Select Country--</option>
+      <option>India</option>
+      <option>USA</option>
+      <option>Canada</option>
+      <option>Australia</option>
+      <option>United Kingdom</option>
+      <option>Germany</option>
+      <option>France</option>
+      <option>Japan</option>
+      <option>South Africa</option>
+      <option>Brazil</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="message" placeholder="Write something..." style="height:150px" required></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <p class="success-message" id="successMessage">✅ Submitted successfully! Your Advisor has been informed via e-mail!</p>
+
+  <div class="team">
+    <h3>Meet Our Career Guidance Team</h3>
+    <div class="member">
+      <h4>M Ganesh</h4>
+      <button onclick="showDetails('member1')">Show Contact</button>
+      <div class="member-details" id="member1">
+        📧 Email: ganeshmogalapalli2006@gmail.com<br>
+        📞 Phone: +91-9581874864
+      </div>
+    </div>
+    <div class="member">
+      <h4>Dharma Teja</h4>
+      <button onclick="showDetails('member2')">Show Contact</button>
+      <div class="member-details" id="member2">
+        📧 Email: burridharmateja@gmail.com<br>
+        📞 Phone: +91-9392180534
+      </div>
+    </div>
+    <div class="member">
+      <h4>Yashwanth</h4>
+      <button onclick="showDetails('member3')">Show Contact</button>
+      <div class="member-details" id="member3">
+        📧 Email: yashwanthgurram@gmail.com<br>
+        📞 Phone: +91-8978541399
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  emailjs.init("TsDCRFrHklaQChiL8");
+
+  const form = document.getElementById("contact-form");
+  const successMessage = document.getElementById("successMessage");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    emailjs.sendForm("service_j99zs6o", "template_b4r4he6", this)
+      .then(() => {
+        successMessage.style.display = "block";
+        form.reset();
+      }, (error) => {
+        alert("❌ Failed to send message. Please try again.");
+        console.error(error);
+      });
+  });
+
+  function showDetails(id) {
+    const div = document.getElementById(id);
+    div.style.display = div.style.display === "block" ? "none" : "block";
+  }
+
+  function toggleTheme() {
+    document.body.classList.toggle("dark-mode");
+  }
+</script>
+
+</body>
+</html>

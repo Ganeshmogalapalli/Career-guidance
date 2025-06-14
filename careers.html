@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Explore Careers</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #003366;
+            background: linear-gradient(135deg, #e0f7fa, #f0f8ff);
+            animation: gradientMove 15s ease infinite;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header, footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2em;
+        }
+
+        nav {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        nav a {
+            background-color: white;
+            color: #003366;
+            padding: 10px 16px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #e6e6e6;
+            transform: scale(1.05);
+        }
+
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            min-height: 600px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #0077cc;
+            font-size: 2em;
+            margin-bottom: 40px;
+        }
+
+        .category-link {
+            text-decoration: none;
+            display: block;
+        }
+
+        .category {
+            background-color: white;
+            border-left: 6px solid #0077cc;
+            border-radius: 10px;
+            padding: 20px 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .category:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+        }
+
+        .category h3 {
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #cc0000;
+        }
+
+        .category p {
+            margin: 8px 0 0;
+            font-size: 1em;
+            color: #333;
+        }
+
+        .emoji {
+            font-size: 2em;
+            position: absolute;
+            top: 20px;
+            right: 25px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .category {
+                padding: 20px;
+            }
+
+            .emoji {
+                position: static;
+                display: block;
+                text-align: right;
+                margin-top: 10px;
+            }
+
+            nav {
+                position: static;
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Explore Careers</h1>
+        <nav>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>Career Categories</h2>
+
+        <a href="tech.html" class="category-link">
+            <div class="category">
+                <h3>Technology</h3>
+                <p>Jobs like Software Developer, Data Analyst, and more.</p>
+                <div class="emoji">💻</div>
+            </div>
+        </a>
+
+        <a href="health.html" class="category-link">
+            <div class="category">
+                <h3>Healthcare</h3>
+                <p>Explore roles like Doctor, Nurse, and Pharmacist.</p>
+                <div class="emoji">🩺</div>
+            </div>
+        </a>
+
+        <a href="arts.html" class="category-link">
+            <div class="category">
+                <h3>Arts</h3>
+                <p>Creative careers like Graphic Designer and Writer.</p>
+                <div class="emoji">🎨</div>
+            </div>
+        </a>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Career Guidance</p>
+    </footer>
+</body>
+</html>

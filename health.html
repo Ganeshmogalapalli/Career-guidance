@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Medical Career Guidance</title>
+  <style>
+    :root {
+      --primary-bg: #add8e6;
+      --primary-dark: #002f6c;
+      --accent: #e60000;
+      --accent-dark: #b30000;
+      --highlight: #f0f4ff;
+      --text: #000000;
+      --white: #ffffff;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--primary-bg);
+      color: var(--text);
+    }
+
+    .header {
+      background-color: var(--primary-dark);
+      color: var(--white);
+      text-align: center;
+      padding: 20px;
+      border-bottom: 5px solid var(--accent);
+      position: relative;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 40px;
+    }
+
+    .header p {
+      margin: 10px 0 0;
+      font-size: 20px;
+    }
+
+    nav {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    nav a {
+      background-color: var(--accent);
+      color: var(--white);
+      padding: 10px 16px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: var(--accent-dark);
+      transform: scale(1.05);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .career-card {
+      background-color: var(--white);
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    }
+
+    .career-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+      background-color: var(--highlight);
+    }
+
+    .career-card h2 {
+      color: var(--primary-dark);
+      margin-top: 0;
+      font-size: 28px;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 5px;
+    }
+
+    .career-card p {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+
+    .skills {
+      color: green;
+      font-style: italic;
+    }
+
+    .salary {
+      color: gray;
+      font-weight: bold;
+    }
+
+    .link-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: var(--accent);
+      color: var(--white);
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .link-btn:hover {
+      background-color: var(--accent-dark);
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      .header h1 {
+        font-size: 28px;
+      }
+
+      .header p {
+        font-size: 16px;
+      }
+
+      .career-card h2 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Medical Career Guidance</h1>
+    <p>Explore Your Future in Medicine</p>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </div>
+
+  <div class="container">
+
+    <div class="career-card">
+      <h2>General Physician</h2>
+      <p>Diagnose and treat a wide range of illnesses, providing primary care to patients.</p>
+      <p class="skills">Skills: Patient Care, Diagnostics, Internal Medicine, Communication</p>
+      <p class="salary">Salary Range: $180,000 - $250,000</p>
+      <a href="./Physician.html" target="_self" class="link-btn">Know More</a>
+    </div>
+
+    <div class="career-card">
+      <h2>Surgeon</h2>
+      <p>Perform operations to treat injuries, diseases, and deformities.</p>
+      <p class="skills">Skills: Surgery, Anatomy, Precision, Critical Thinking</p>
+      <p class="salary">Salary Range: $250,000 - $400,000</p>
+      <a href="./Surgeons.html" target="_self" class="link-btn">Know More</a>
+    </div>
+
+    <div class="career-card">
+      <h2>Pediatrician</h2>
+      <p>Provide medical care to infants, children, and adolescents.</p>
+      <p class="skills">Skills: Child Health, Developmental Care, Empathy, Diagnostics</p>
+      <p class="salary">Salary Range: $150,000 - $220,000</p>
+      <a href="./Pediatrician.html" target="_self" class="link-btn">Know More</a>
+    </div>
+
+    <div class="career-card">
+      <h2>Cardiologist</h2>
+      <p>Specialize in diagnosing and treating heart and blood vessel conditions.</p>
+      <p class="skills">Skills: Cardiology, EKG Analysis, Surgery, Patient Care</p>
+      <p class="salary">Salary Range: $300,000 - $450,000</p>
+      <a href="./Cardiologist.html" target="_self" class="link-btn">Know More</a>
+    </div>
+
+    <div class="career-card">
+      <h2>Dentist</h2>
+      <p>Diagnose and treat issues related to teeth, gums, and oral health.</p>
+      <p class="skills">Skills: Dental Surgery, Oral Care, X-Ray Analysis, Patient Education</p>
+      <p class="salary">Salary Range: $130,000 - $200,000</p>
+      <a href="./Dentist.html" target="_self" class="link-btn">Know More</a>
+    </div>
+
+  </div>
+
+</body>
+</html>

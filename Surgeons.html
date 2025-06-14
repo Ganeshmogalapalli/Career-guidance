@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Surgeon Profile Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f0f4f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #0077b6;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    h1, h2, h3 {
+      color: #023e8a;
+    }
+
+    img {
+      width: 100%;
+      max-height: 600px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      margin-bottom: 50px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card, .skill-box {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover, .skill-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+      background-color: #e0f7ff;
+    }
+
+    .card h3 {
+      color: #0077b6;
+      margin-bottom: 10px;
+      font-size: 1.1em;
+    }
+
+    .card a.button-link {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 8px 16px;
+      background-color: #0077b6;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .card a.button-link:hover {
+      background-color: #005f8a;
+    }
+
+    footer {
+      background-color: #0077b6;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 50px;
+    }
+
+    /* Skills Accordion */
+    .skills-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 20px;
+    }
+
+    .skill-box {
+      cursor: pointer;
+      position: relative;
+    }
+
+    .skill-button {
+      font-size: 1.1em;
+      font-weight: bold;
+      background-color: #0077b6;
+      color: white;
+      border: none;
+      padding: 14px 20px;
+      width: 100%;
+      border-radius: 8px;
+      text-align: left;
+      transition: background-color 0.3s;
+    }
+
+    .skill-box:hover .skill-button {
+      background-color: #005f8a;
+    }
+
+    .skill-content {
+      display: none;
+      background-color: white;
+      padding: 15px;
+      margin-top: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      font-size: 0.95em;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    /* Scroll-to-Top Button */
+    #scrollTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 99;
+      font-size: 20px;
+      border: none;
+      outline: none;
+      background-color: #0077b6;
+      color: white;
+      cursor: pointer;
+      padding: 12px 16px;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: background-color 0.3s ease;
+    }
+
+    #scrollTopBtn:hover {
+      background-color: #005f8a;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Surgeon Overview</h1>
+  <p>Precision. Skill. Life-saving Interventions.</p>
+</header>
+
+<main>
+
+  <div class="section">
+    <h2>About Surgeons</h2>
+    <img src="./Surgeon in Operation Room.jpg" alt="Surgeon in Operation Room">
+    <p>
+      Surgeons are specialized physicians who perform operations to treat injuries, diseases, and deformities. They work in sterile environments, often relying on advanced tools and teams to ensure successful procedures and patient recovery.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>1. Skills & Technologies</h2>
+    <div class="skills-section">
+      <div class="skill-box">
+        <button class="skill-button">Surgical Techniques</button>
+        <div class="skill-content">Mastery of open, laparoscopic, and robotic surgical methods for diverse medical procedures.</div>
+      </div>
+      <div class="skill-box">
+        <button class="skill-button">Anatomical Knowledge</button>
+        <div class="skill-content">Deep understanding of human anatomy essential for precision and avoiding complications during surgery.</div>
+      </div>
+      <div class="skill-box">
+        <button class="skill-button">Laparoscopy & Robotics</button>
+        <div class="skill-content">Use of minimally invasive tools and robotic systems to enhance precision, reduce pain, and speed recovery.</div>
+      </div>
+      <div class="skill-box">
+        <button class="skill-button">Critical Thinking</button>
+        <div class="skill-content">Ability to make rapid, informed decisions during high-pressure situations in the operating room.</div>
+      </div>
+      <div class="skill-box">
+        <button class="skill-button">Team Leadership</button>
+        <div class="skill-content">Leading surgical teams, coordinating roles, and ensuring seamless execution of complex procedures.</div>
+      </div>
+      <div class="skill-box">
+        <button class="skill-button">Post-operative Care</button>
+        <div class="skill-content">Monitoring recovery, managing complications, and supporting patients through rehabilitation.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>2. Top Employers & Hospitals</h2>
+    <div class="card-grid">
+      <div class="card"><h3>Mayo Clinic</h3><p>Renowned for surgical innovations and patient care.</p><a href="mayo.html" class="button-link">Visit Site</a></div>
+      <div class="card"><h3>Johns Hopkins Hospital</h3><p>Global leader in surgical research and education.</p><a href="johns.html" class="button-link">Visit Site</a></div>
+      <div class="card"><h3>Mass General</h3><p>Harvard-affiliated hospital with cutting-edge surgical practices.</p><a href="massgeneral.html" class="button-link">Visit Site</a></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>3. Reference Links</h2>
+    <div class="card-grid">
+      <div class="card"><h3>What Does a Surgeon Do?</h3><p>Explore the responsibilities and specialties in surgery.</p><a href="https://www.medicalnewstoday.com/articles/surgeon" class="button-link" target="_blank">Read More</a></div>
+      <div class="card"><h3>American College of Surgeons</h3><p>Resources, certifications, and professional guidelines.</p><a href="https://www.facs.org/" class="button-link" target="_blank">Visit ACS</a></div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2025 HealthWeb | Designed for Educational & Informational Use</p>
+</footer>
+
+<!-- Scroll-to-Top Button -->
+<button id="scrollTopBtn" title="Go to top">↑</button>
+
+<!-- JavaScript for interactivity -->
+<script>
+  // Scroll-to-top functionality
+  const scrollBtn = document.getElementById("scrollTopBtn");
+  window.onscroll = function () {
+    scrollBtn.style.display = (document.documentElement.scrollTop > 200) ? "block" : "none";
+  };
+  scrollBtn.onclick = function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // Accordion logic
+  const buttons = document.querySelectorAll(".skill-button");
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const content = btn.nextElementSibling;
+      const isOpen = content.style.display === "block";
+      document.querySelectorAll(".skill-content").forEach(c => c.style.display = "none");
+      content.style.display = isOpen ? "none" : "block";
+    });
+  });
+</script>
+
+</body>
+</html>
+x
